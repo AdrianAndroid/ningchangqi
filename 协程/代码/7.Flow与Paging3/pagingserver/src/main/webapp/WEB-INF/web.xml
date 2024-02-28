@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>PositionalDataSourceServlet</servlet-name>
+    <servlet-class>com.dongnaoedu.pagingserver.servlet.PositionalDataSourceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PositionalDataSourceServlet</servlet-name>
+    <url-pattern>/pds.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PageKeyedDataSourceServlet</servlet-name>
+    <servlet-class>com.dongnaoedu.pagingserver.servlet.PageKeyedDataSourceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>PageKeyedDataSourceServlet</servlet-name>
+    <url-pattern>/pkds.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ItemKeyedDataSourceServlet</servlet-name>
+    <servlet-class>com.dongnaoedu.pagingserver.servlet.ItemKeyedDataSourceServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ItemKeyedDataSourceServlet</servlet-name>
+    <url-pattern>/ikds.do</url-pattern>
+  </servlet-mapping>
+  
+  <listener>
+    <listener-class>com.dongnaoedu.pagingserver.servlet.ServerStartupListener</listener-class>
+  </listener>
+
+</web-app>
